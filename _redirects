@@ -1,0 +1,3 @@
+# Cloudflare Pages fallback for this simple static site
+# This keeps unknown paths from showing a harsh error page.
+/* /index.html 200
