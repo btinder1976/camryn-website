@@ -20,6 +20,25 @@ The first version of the site is intentionally bright, animated, magical, and pl
 - A fairy garden business idea section
 - Website challenges to help Camryn learn how to update the site
 
+## Cloudflare Pages Setup
+
+This is a simple static website, so Cloudflare Pages does not need a build system.
+
+Recommended Cloudflare Pages settings:
+
+- Framework preset: `None`
+- Build command: leave blank
+- Build output directory: `/`
+- Root directory: `/`
+- Production branch: `main`
+
+Cloudflare-specific files:
+
+- `_headers` — adds safer browser/security headers
+- `_redirects` — sends unknown paths back to `index.html` so the site does not show a harsh error page
+
+If the site later becomes a bigger app with multiple pages, React, Vite, Astro, or another framework, these settings may need to change.
+
 ## Fairy Garden Business Idea
 
 Camryn has talked about a custom 3D printed fairy garden project.
@@ -83,3 +102,5 @@ The assistant should understand what she means when possible, ask simple questio
 ## Current Files
 
 - `index.html` — the full animated homepage with HTML, CSS, and JavaScript in one file
+- `_headers` — Cloudflare Pages security and cache headers
+- `_redirects` — Cloudflare Pages fallback routing
